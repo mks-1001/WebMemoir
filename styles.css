@@ -1,0 +1,45 @@
+body {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+label, input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#closeButton {
+  background-color: #f44336;
+}
+
+#closeButton:hover {
+  background-color: #d32f2f;
+}
+
+#viewSavedNotes {
+  margin-top: 20px;
+  background-color: #008CBA;
+}
+
+#viewSavedNotes:hover {
+  background-color: #007B9A;
+}

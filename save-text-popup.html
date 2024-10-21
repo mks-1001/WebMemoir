@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Text</title>
+    <link rel="stylesheet" href="save-text-popup.css">
+</head>
+<body>
+    <div class="web-text-saver-popup">
+        <h2>Save Selected Text</h2>
+        <label for="textName">Name for the Saved Text:</label>
+        <input type="text" id="textName" placeholder="Enter a name for this text">
+        
+        <label for="selectedText">Selected Text:</label>
+        <textarea id="selectedText" readonly></textarea>
+        
+        <label for="notes">Notes/Thoughts:</label>
+        <textarea id="notes" placeholder="Add your notes here"></textarea>
+        
+        <button id="saveButton">Save</button>
+        <button id="closeButton">Close</button>
+    </div>
+    <script src="save-text-popup.js"></script>
+</body>
+</html>
