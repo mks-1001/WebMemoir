@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Notes</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="management.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Saved Notes</h1>
+        <div id="searchAndFilter">
+            <input type="text" id="searchInput" placeholder="Search saved texts...">
+            <select id="filterSelect">
+                <option value="all">All</option>
+                <option value="name">Name</option>
+                <option value="content">Content</option>
+                <option value="notes">Notes</option>
+                <option value="url">URL</option>
+                <option value="tags">Tags</option>
+            </select>
+            <input type="text" id="tagFilter" placeholder="Filter by tags (comma-separated)">
+        </div>
+        <table id="savedNotesTable">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
+                    <th>Name</th>
+                    <th>Text Preview</th>
+                    <th>Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="savedNotesBody">
+                <!-- Saved notes will be inserted here -->
+            </tbody>
+        </table>
+        <div id="pagination">
+            <button id="prevPage"><span class="material-icons">chevron_left</span></button>
+            <span id="pageInfo"></span>
+            <button id="nextPage"><span class="material-icons">chevron_right</span></button>
+        </div>
+        <div id="actions">
+            <button id="exportBtn" disabled><span class="material-icons">file_download</span> Export</button>
+            <button id="deleteBtn" disabled><span class="material-icons">delete</span> Delete</button>
+            <select id="exportFormat">
+                <option value="json">JSON</option>
+                <option value="csv">CSV</option>
+                <option value="txt">Plain Text</option>
+            </select>
+        </div>
+    </div>
+    <div id="detailView" class="modal">
+        <div class="modal-content">
+            <span class="close material-icons">close</span>
+            <h2 id="detailTitle"></h2>
+            <p id="detailUrl"></p>
+            <div id="detailText"></div>
+            <p id="detailNotes"></p>
+            <p id="detailTags"></p>
+        </div>
+    </div>
+    <script src="storage.js"></script>
+    <script src="management.js"></script>
+</body>
+</html>
